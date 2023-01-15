@@ -1,8 +1,14 @@
-// Abstract file
-@import "./scss/abstract/all.scss";
+// Abstracts styles
+@import "./scss/abstracts/all.scss";
 
-// Core file
+// Core styles
 @import "./scss/core/all.scss";
 
-// Pages file
+// Components styles
+@import "./scss/components/all.scss";
+
+// Layout styles
+@import "./scss/layout/all.scss";
+
+// Pages style
 @import "./scss/pages/all.scss";
