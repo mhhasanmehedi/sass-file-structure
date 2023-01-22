@@ -1,0 +1,41 @@
+// Desktop Extra large device
+@mixin xxl {
+  @media (min-width: 1400px) {
+    @content;
+  }
+}
+
+// Desktop Device
+@mixin xl {
+  @media (max-width: 1400px) {
+    @content;
+  }
+}
+
+// Laptop device
+@mixin lg {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+// Tablet device
+@mixin md {
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+
+// Small device
+@mixin sm {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+// Extra small device
+@mixin xsm {
+  @media (max-width: 576px) {
+    @content;
+  }
+}
