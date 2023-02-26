@@ -1,0 +1,110 @@
+.footer {
+  color: white;
+  .footerTop {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(https://images.unsplash.com/photo-1497864149936-d3163f0c0f4b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80);
+    z-index: 1;
+    @include padding(4rem 0);
+    &::after {
+      position: absolute;
+      content: "";
+      // background-color: transparentize($color: #151414, $amount: 0.05);
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
+      z-index: -1;
+    }
+
+    .footerInfo {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      p {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        i {
+          margin-top: 6px;
+          color: $primary-color;
+        }
+      }
+    }
+
+    .footerTitle {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.178);
+      margin-bottom: 25px;
+      padding-bottom: 8px;
+    }
+    .footerList {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      .footerLink {
+        position: relative;
+        display: block;
+        padding-left: 20px;
+        transition: 0.3s;
+        &:hover {
+          padding-left: 0;
+          color: $primary-color;
+          &::after {
+            visibility: hidden;
+            opacity: 0;
+          }
+        }
+        &::after {
+          position: absolute;
+          content: "\f0da";
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          color: white;
+          visibility: visible;
+          opacity: 1;
+          transition: 0.3s;
+        }
+      }
+    }
+    .footerGallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      .galleryImg {
+        height: 60px;
+        width: 100%;
+        img {
+          height: 100%;
+          object-fit: cover;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .footerBottom {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include md() {
+      flex-direction: column;
+      justify-content: center;
+      gap: 6px;
+    }
+    p {
+      text-align: center;
+      @include sm() {
+        font-size: 15px;
+      }
+      a {
+        color: $primary-color;
+        font-weight: bold;
+      }
+    }
+  }
+}
