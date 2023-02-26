@@ -39,3 +39,15 @@ input[type="number"] {
 img {
   max-width: 100%;
 }
+
+::-moz-selection {
+  color: white;
+  background: $primary-color;
+  text-shadow: none;
+}
+
+::selection {
+  color: white;
+  background: $primary-color;
+  text-shadow: none;
+}
